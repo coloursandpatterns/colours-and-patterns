@@ -3,515 +3,423 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Raajas India — Wholesale Kitchen Equipment &amp; Supplier</title>
-<meta name="description" content="Raajas India — manufacturer and wholesale supplier of cutlery, crockery, cookware, and kitchen equipment for hotels and retail."/>
+<title>Raajas India — Wholesale Kitchen Equipment &amp; Supply</title>
+<meta name="description" content="Raajas India — manufacturer and wholesale supplier of cutlery, crockery, cookware, and kitchen equipment for hotels and retail across India."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700;1,900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#1A1A1A;color:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+
 :root{
   --ink:#1A1A1A;
   --pink:#EC1587;
   --orange:#FF6736;
   --purple:#8A159F;
-  --cream:#FAF7F2;
-  --grey:#F0EDE8;
+  --cream:#F8F5F0;
+  --bone:#EDE9E3;
 }
-body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--ink);color:#fff;overflow-x:hidden;line-height:1.6}
-a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
 
-/* ─── LOTUS SVG ─── */
-.lotus{display:inline-block;vertical-align:middle}
+/* ─ NAV ─ */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:28px 72px;transition:all .5s}
+nav.stuck{background:rgba(26,26,26,.97);backdrop-filter:blur(20px);padding:16px 72px;border-bottom:1px solid rgba(255,255,255,.07)}
+.nlogo{display:flex;align-items:center;gap:10px}
+.nlogotext{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;letter-spacing:.02em}
+.nlogotext b{color:var(--pink);font-weight:900}
+.nlinks{display:flex;gap:44px}
+.nlinks a{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.45;transition:opacity .3s}
+.nlinks a:hover{opacity:1}
+.nquote{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:11px 28px;border:1.5px solid rgba(255,255,255,.3);color:#fff;transition:all .3s}
+.nquote:hover{border-color:var(--pink);color:var(--pink)}
+.nham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nham span{width:20px;height:1.5px;background:#fff;display:block;transition:all .3s}
 
-/* ─── NAV ─── */
-header{position:fixed;top:0;left:0;right:0;z-index:100;mix-blend-mode:normal}
-header.solid{background:rgba(26,26,26,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(236,21,135,.18)}
-.nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:20px 56px;transition:padding .4s}
-header.solid .nav-wrap{padding:13px 56px}
-.nav-brand{display:flex;align-items:center;gap:10px}
-.brand-name{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;letter-spacing:.02em;color:#fff}
-.brand-name b{color:var(--pink);font-weight:900}
-.nav-menu{display:flex;gap:38px;align-items:center}
-.nav-menu a{font-size:.85rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;opacity:.65;transition:opacity .3s}
-.nav-menu a:hover{opacity:1}
-.nav-quote{background:var(--pink);color:#fff;padding:10px 26px;font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:none;cursor:pointer;transition:all .3s;font-family:'Plus Jakarta Sans',sans-serif}
-.nav-quote:hover{background:#d01278;transform:translateY(-1px)}
-.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
-.ham span{width:22px;height:2px;background:#fff;display:block}
+/* ─ HERO ─ */
+.hero{min-height:100svh;display:flex;align-items:flex-end;padding:0 72px 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 65% at 85% 15%,rgba(236,21,135,.1),transparent),radial-gradient(ellipse 35% 45% at 5% 85%,rgba(138,21,159,.07),transparent);pointer-events:none}
+.hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:80px 80px;pointer-events:none}
+.hero-wrap{display:grid;grid-template-columns:1fr 380px;gap:60px;align-items:flex-end;position:relative;z-index:2;max-width:1360px;margin:0 auto;width:100%}
+.hero-eyebrow{display:flex;align-items:center;gap:14px;font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:30px}
+.hero-eyebrow::before{content:'';width:30px;height:1px;background:var(--pink);flex-shrink:0}
+.hero-eyebrow span{color:var(--pink)}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(4.2rem,7.5vw,8rem);font-weight:900;line-height:.95;letter-spacing:-.03em}
+.hero h1 .l2{display:block;padding-left:clamp(50px,7vw,100px);color:rgba(255,255,255,.45);font-weight:400;font-style:italic}
+.hero h1 .l3{display:block;padding-left:clamp(16px,2vw,30px);color:var(--pink)}
+.hdivider{width:100%;max-width:520px;height:1px;background:linear-gradient(90deg,var(--pink) 0%,rgba(236,21,135,0) 100%);margin:36px 0}
+.hero-bottom{display:flex;align-items:center;gap:36px;flex-wrap:wrap}
+.hero-desc{font-size:.95rem;color:rgba(255,255,255,.45);max-width:400px;line-height:1.9}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
 
-/* ─── HERO ─── */
-.hero{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
-.hero-left{background:var(--ink);display:flex;flex-direction:column;justify-content:flex-end;padding:160px 56px 80px;position:relative;z-index:2}
-.hero-left::after{content:'';position:absolute;right:-1px;top:0;bottom:0;width:60px;background:var(--ink);clip-path:polygon(0 0,100% 10%,100% 90%,0 100%);z-index:3}
-.hero-right{background:var(--pink);display:flex;align-items:center;justify-content:center;padding:160px 60px 80px 80px;position:relative;overflow:hidden}
-.hero-right::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23fff' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
-.hero-eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:20px;display:flex;align-items:center;gap:10px}
-.hero-eyebrow::before{content:'';width:28px;height:2px;background:var(--pink)}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(3.2rem,5.5vw,5.8rem);font-weight:900;line-height:1.05;letter-spacing:-.02em;margin-bottom:32px}
-.hero h1 span{font-style:italic;color:var(--pink)}
-.hero-sub{font-size:1rem;opacity:.65;line-height:1.85;max-width:420px;margin-bottom:48px}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-.btn-main{background:var(--pink);color:#fff;padding:15px 36px;font-size:.88rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;display:inline-block;transition:all .3s;border:2px solid var(--pink)}
-.btn-main:hover{background:transparent;color:var(--pink)}
-.btn-line{background:transparent;color:#fff;padding:14px 36px;font-size:.88rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;display:inline-block;transition:all .3s;border:2px solid rgba(255,255,255,.3)}
-.btn-line:hover{border-color:#fff}
-.hero-right-content{position:relative;z-index:2;width:100%}
-.big-stat{margin-bottom:36px}
-.big-stat-num{font-family:'Playfair Display',serif;font-size:clamp(5rem,10vw,9rem);font-weight:900;line-height:.9;color:#fff;display:block}
-.big-stat-label{font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-top:10px;display:block;border-top:1px solid rgba(255,255,255,.3);padding-top:12px}
-.hero-pills{display:flex;flex-direction:column;gap:12px;margin-top:36px}
-.pill{background:rgba(255,255,255,.15);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.25);padding:14px 20px;display:flex;align-items:center;gap:14px;font-size:.88rem;font-weight:600;color:#fff}
-.pill-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-.hero-scroll{position:absolute;bottom:36px;left:56px;display:flex;align-items:center;gap:10px;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.5}
-.hero-scroll::before{content:'';width:36px;height:1px;background:currentColor}
+.btn-pk{background:var(--pink);color:#fff;padding:14px 34px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;display:inline-block;transition:all .3s;border:1.5px solid var(--pink)}
+.btn-pk:hover{background:transparent;color:var(--pink)}
+.btn-ol{background:transparent;color:rgba(255,255,255,.6);padding:13px 34px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;display:inline-block;border:1.5px solid rgba(255,255,255,.2);transition:all .3s}
+.btn-ol:hover{border-color:rgba(255,255,255,.5);color:#fff}
 
-/* ─── MARQUEE ─── */
-.marquee-wrap{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);overflow:hidden;padding:16px 0}
-.marquee-track{display:flex;gap:0;animation:march 28s linear infinite;white-space:nowrap}
-.marquee-item{display:inline-flex;align-items:center;gap:14px;padding:0 28px;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);flex-shrink:0}
-.marquee-item::after{content:'◆';color:var(--pink);font-size:.55rem}
-@keyframes march{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.hero-r{padding-bottom:6px}
+.hstat{margin-bottom:30px}
+.hstat-n{font-family:'Playfair Display',serif;font-size:clamp(4.5rem,8vw,7.5rem);font-weight:900;line-height:1;display:block}
+.hstat-l{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);border-top:1px solid rgba(255,255,255,.1);padding-top:12px;margin-top:10px;display:block}
+.hpills{border-top:1px solid rgba(255,255,255,.07)}
+.hpill{display:flex;align-items:center;gap:11px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:.8rem;color:rgba(255,255,255,.45);font-weight:500;letter-spacing:.02em;transition:color .3s}
+.hpill:hover{color:rgba(255,255,255,.75)}
+.hpill-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.hero-scroll{position:absolute;bottom:38px;left:72px;display:flex;align-items:center;gap:10px;font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;opacity:.35}
+.hero-scroll::before{content:'';width:32px;height:1px;background:currentColor}
 
-/* ─── ABOUT STRIP ─── */
-.about-strip{background:var(--cream);color:var(--ink);padding:90px 56px}
-.about-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:center}
-.about-label{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);margin-bottom:18px}
-.about-inner h2{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3.6rem);font-weight:900;line-height:1.15;letter-spacing:-.015em;margin-bottom:0}
-.about-inner h2 em{font-style:italic;color:var(--pink)}
-.about-right p{font-size:1.05rem;color:rgba(26,26,26,.7);line-height:1.9;margin-bottom:20px}
-.about-right p:last-child{margin-bottom:0}
-.about-facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(26,26,26,.1);margin-top:48px}
-.fact{background:var(--cream);padding:24px;border:none}
-.fact-n{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;line-height:1;color:var(--ink);margin-bottom:5px}
-.fact-l{font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(26,26,26,.5)}
+/* ─ STATS BAR ─ */
+.sbar{background:#111;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05)}
+.sbar-inner{max-width:1360px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);padding:0 72px}
+.sitem{padding:44px 20px;text-align:center;position:relative}
+.sitem+.sitem::before{content:'';position:absolute;left:0;top:25%;bottom:25%;width:1px;background:rgba(255,255,255,.05)}
+.sitem-n{font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;line-height:1;display:block;margin-bottom:8px}
+.sitem-n span{color:var(--pink)}
+.sitem-l{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3)}
 
-/* ─── PRODUCTS ─── */
-.products-sec{background:var(--ink);padding:100px 56px}
-.products-head{max-width:1200px;margin:0 auto 64px;display:flex;justify-content:space-between;align-items:flex-end;gap:30px}
-.products-head h2{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.2vw,4rem);font-weight:900;line-height:1.1;letter-spacing:-.015em}
-.products-head h2 em{font-style:italic;color:var(--orange)}
-.products-head p{font-size:.95rem;color:rgba(255,255,255,.5);max-width:320px;line-height:1.8;text-align:right}
-.prod-layout{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:auto auto;gap:2px}
-.pcell{padding:48px 44px;position:relative;overflow:hidden;cursor:default;transition:all .4s}
-.pcell-1{background:#1f1f1f;grid-column:1;grid-row:1}
-.pcell-2{background:#1d1d1d;grid-column:2;grid-row:1}
-.pcell-3{background:#1c1c1c;grid-column:1;grid-row:2}
-.pcell-4{background:var(--pink);grid-column:2;grid-row:2}
-.pcell:hover{filter:brightness(1.1)}
-.pcell-4:hover{filter:brightness(1.08)}
-.pcell::before{content:'';position:absolute;top:-60px;right:-60px;width:160px;height:160px;border-radius:50%;opacity:.04;background:var(--pink)}
-.pcell-2::before{background:var(--orange)}
-.pcell-3::before{background:var(--purple)}
-.pcell-4::before{background:#fff;opacity:.08}
-.pcell-num{font-family:'Playfair Display',serif;font-size:5rem;font-weight:900;line-height:1;opacity:.07;position:absolute;top:28px;right:32px;line-height:1}
-.pcell-icon{font-size:2.2rem;margin-bottom:20px}
-.pcell h3{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;line-height:1.2;margin-bottom:14px}
-.pcell-4 h3{color:#fff}
-.pcell p{font-size:.9rem;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:24px}
-.pcell-4 p{color:rgba(255,255,255,.8)}
-.pcell-tags{display:flex;flex-wrap:wrap;gap:7px}
-.ptag{padding:4px 12px;font-size:.72rem;font-weight:700;letter-spacing:.06em;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.6)}
-.pcell-4 .ptag{border-color:rgba(255,255,255,.4);color:#fff}
+/* ─ PRODUCTS ─ */
+.products{background:var(--cream);color:var(--ink);padding:120px 72px}
+.products-wrap{max-width:1360px;margin:0 auto}
+.ph{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:flex-end;margin-bottom:72px;padding-bottom:60px;border-bottom:1px solid rgba(26,26,26,.1)}
+.ph-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:18px}
+.ph h2{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,5rem);font-weight:900;line-height:1.05;letter-spacing:-.02em}
+.ph h2 em{font-style:italic;color:var(--pink)}
+.ph-desc{font-size:.97rem;color:rgba(26,26,26,.55);line-height:1.9;max-width:420px;align-self:flex-end}
+.plist{display:flex;flex-direction:column}
+.prow{display:grid;grid-template-columns:72px 220px 1fr auto;gap:40px;align-items:center;padding:44px 0;border-bottom:1px solid rgba(26,26,26,.08);position:relative;transition:all .4s;cursor:default}
+.prow::before{content:'';position:absolute;left:-72px;right:-72px;top:0;bottom:0;background:linear-gradient(90deg,rgba(236,21,135,.04),transparent);opacity:0;transition:opacity .4s}
+.prow:hover::before{opacity:1}
+.prow:hover .pnum{color:var(--pink);font-style:italic}
+.pnum{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:700;color:rgba(26,26,26,.1);line-height:1;transition:all .4s;position:relative;z-index:1}
+.pname{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:var(--ink);line-height:1.2;position:relative;z-index:1}
+.pdesc{font-size:.88rem;color:rgba(26,26,26,.5);line-height:1.85;position:relative;z-index:1}
+.ptags{display:flex;flex-direction:column;gap:5px;align-items:flex-end;position:relative;z-index:1}
+.ptag{font-size:.68rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:4px 10px;border:1px solid rgba(26,26,26,.14);color:rgba(26,26,26,.45);white-space:nowrap}
 
-/* ─── WHY ─── */
-.why-sec{background:var(--grey);color:var(--ink);padding:100px 56px;position:relative;overflow:hidden}
-.why-sec::before{content:'RAAJAS';font-family:'Playfair Display',serif;font-size:clamp(8rem,18vw,18rem);font-weight:900;opacity:.04;position:absolute;bottom:-20px;left:-10px;line-height:1;pointer-events:none;color:var(--ink)}
-.why-inner{max-width:1200px;margin:0 auto;position:relative;z-index:2}
-.why-top{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:72px}
-.why-tag{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);margin-bottom:18px}
-.why-top h2{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4vw,3.8rem);font-weight:900;line-height:1.1;letter-spacing:-.015em}
-.why-top h2 em{font-style:italic;color:var(--pink)}
-.why-top p{font-size:1.05rem;color:rgba(26,26,26,.65);line-height:1.9}
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
-.wbox{background:#fff;padding:36px 32px;border-left:3px solid transparent;transition:all .3s}
-.wbox:hover{transform:translateY(-4px)}
-.wbox:nth-child(1){border-color:var(--pink)}
-.wbox:nth-child(2){border-color:var(--orange)}
-.wbox:nth-child(3){border-color:var(--purple)}
-.wbox:nth-child(4){border-color:var(--pink)}
-.wbox-icon{font-size:1.8rem;margin-bottom:18px}
-.wbox h4{font-size:1rem;font-weight:800;color:var(--ink);margin-bottom:10px}
-.wbox p{font-size:.88rem;color:rgba(26,26,26,.6);line-height:1.8}
+/* ─ WHY ─ */
+.why{background:var(--ink);padding:120px 72px}
+.why-wrap{max-width:1360px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}
+.wlabel{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:18px}
+.why h2{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,5rem);font-weight:900;line-height:1.05;letter-spacing:-.02em;margin-bottom:30px}
+.why h2 em{font-style:italic;color:var(--pink)}
+.why-intro{font-size:.95rem;color:rgba(255,255,255,.38);line-height:1.95;border-top:1px solid rgba(255,255,255,.07);padding-top:26px}
+.wfeats{display:flex;flex-direction:column}
+.wfeat{display:grid;grid-template-columns:44px 1fr;gap:20px;padding:32px 0;border-bottom:1px solid rgba(255,255,255,.06);align-items:start;transition:all .3s}
+.wfeat:first-child{border-top:1px solid rgba(255,255,255,.06)}
+.wfeat:hover .wfn{color:var(--pink)}
+.wfn{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;font-style:italic;color:rgba(255,255,255,.18);line-height:1;padding-top:3px;transition:color .4s}
+.wfeat h4{font-size:.97rem;font-weight:700;margin-bottom:8px;color:#fff}
+.wfeat p{font-size:.87rem;color:rgba(255,255,255,.4);line-height:1.85}
 
-/* ─── CLIENTS ─── */
-.clients-sec{background:var(--ink);padding:100px 56px}
-.clients-inner{max-width:1200px;margin:0 auto}
-.clients-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:60px;gap:30px}
-.clients-head h2{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.2vw,4rem);font-weight:900;line-height:1.1;letter-spacing:-.015em}
-.clients-head h2 em{font-style:italic;color:var(--pink)}
-.clients-label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:10px}
-.clients-sub{font-size:.9rem;color:rgba(255,255,255,.45);max-width:260px;text-align:right;line-height:1.8}
+/* ─ INDUSTRIES ─ */
+.ind{background:#111;padding:120px 72px;border-top:1px solid rgba(255,255,255,.04)}
+.ind-wrap{max-width:1360px;margin:0 auto}
+.ind-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:72px;gap:40px;flex-wrap:wrap}
+.ind-top-left .il{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:18px}
+.ind-top h2{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,5rem);font-weight:900;line-height:1.05;letter-spacing:-.02em}
+.ind-top h2 em{font-style:italic;color:var(--pink)}
+.ind-sub{font-size:.88rem;color:rgba(255,255,255,.3);max-width:280px;line-height:1.9;text-align:right}
+.ind-row{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.07)}
+.icell{padding:52px 36px;border-right:1px solid rgba(255,255,255,.05);position:relative;overflow:hidden;transition:background .4s}
+.icell:last-child{border-right:none}
+.icell:hover{background:rgba(255,255,255,.02)}
+.icell::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;transform:scaleX(0);transform-origin:left;transition:transform .5s}
+.icell:nth-child(1)::after{background:var(--pink)}
+.icell:nth-child(2)::after{background:var(--orange)}
+.icell:nth-child(3)::after{background:var(--purple)}
+.icell:nth-child(4)::after{background:linear-gradient(90deg,var(--pink),var(--orange))}
+.icell:hover::after{transform:scaleX(1)}
+.icell-n{font-family:'Playfair Display',serif;font-size:.8rem;font-weight:700;font-style:italic;color:rgba(255,255,255,.18);display:block;margin-bottom:36px}
+.icell-icon{width:38px;height:38px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;margin-bottom:26px;transition:border-color .3s}
+.icell:hover .icell-icon{border-color:rgba(255,255,255,.25)}
+.icell h3{font-size:1.05rem;font-weight:700;margin-bottom:12px}
+.icell p{font-size:.84rem;color:rgba(255,255,255,.35);line-height:1.85}
+
+/* ─ TESTIMONIALS ─ */
+.testimonials{background:var(--cream);color:var(--ink);padding:120px 72px}
+.test-wrap{max-width:1360px;margin:0 auto}
+.test-head{margin-bottom:72px}
+.tlabel{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:18px}
+.test-head h2{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,5rem);font-weight:900;line-height:1.05;letter-spacing:-.02em}
+.test-head h2 em{font-style:italic;color:var(--pink)}
 .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
-.tcell{background:#1f1f1f;padding:44px 40px;position:relative;transition:all .4s}
-.tcell:hover{background:#252525}
-.tcell-accent{position:absolute;top:0;left:0;right:0;height:3px}
-.tcell:nth-child(1) .tcell-accent{background:var(--pink)}
-.tcell:nth-child(2) .tcell-accent{background:var(--orange)}
-.tcell:nth-child(3) .tcell-accent{background:var(--purple)}
-.tcell-stars{font-size:.78rem;color:#FFB800;letter-spacing:3px;margin-bottom:22px}
-.tcell-q{font-family:'Playfair Display',serif;font-size:4rem;font-weight:700;line-height:.8;display:block;margin-bottom:12px;background:linear-gradient(135deg,var(--pink),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.tcell-text{font-size:.95rem;color:rgba(255,255,255,.72);line-height:1.85;font-style:italic;margin-bottom:28px}
-.tcell-auth{display:flex;align-items:center;gap:13px;border-top:1px solid rgba(255,255,255,.07);padding-top:22px}
-.tav{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.82rem;flex-shrink:0}
-.tav-name{font-size:.88rem;font-weight:700;margin-bottom:2px}
-.tav-role{font-size:.76rem;color:rgba(255,255,255,.4)}
+.tcard{background:var(--bone);padding:52px 44px;position:relative;transition:background .3s}
+.tcard:hover{background:#E5E0D8}
+.tcard-top{position:absolute;top:0;left:0;right:0;height:3px}
+.tcard-q{font-family:'Playfair Display',serif;font-size:5.5rem;line-height:.75;display:block;margin-bottom:18px;opacity:.1;color:var(--ink);font-weight:700}
+.tcard-text{font-family:'Playfair Display',serif;font-size:1.05rem;font-style:italic;color:rgba(26,26,26,.7);line-height:1.85;margin-bottom:36px;font-weight:400}
+.tcard-rule{width:36px;height:1px;background:rgba(26,26,26,.18);margin-bottom:22px}
+.tcard-name{font-size:.9rem;font-weight:700;color:var(--ink);margin-bottom:4px}
+.tcard-role{font-size:.76rem;color:rgba(26,26,26,.4);letter-spacing:.03em}
+.tcard-stars{position:absolute;bottom:44px;right:44px;font-size:.68rem;color:#D4A017;letter-spacing:2px}
 
-/* ─── INDUSTRIES ─── */
-.ind-sec{background:var(--pink);padding:100px 56px;position:relative;overflow:hidden}
-.ind-sec::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23fff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
-.ind-inner{max-width:1200px;margin:0 auto;position:relative;z-index:2}
-.ind-top{margin-bottom:60px}
-.ind-top span{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7);display:block;margin-bottom:18px}
-.ind-top h2{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.2vw,4rem);font-weight:900;line-height:1.1;letter-spacing:-.015em;color:#fff}
-.ind-top h2 em{font-style:italic}
-.ind-row{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
-.icard{background:rgba(255,255,255,.12);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.2);padding:38px 30px;transition:all .3s}
-.icard:hover{background:rgba(255,255,255,.2);transform:translateY(-4px)}
-.icard-em{font-size:2.6rem;display:block;margin-bottom:18px}
-.icard h3{font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:10px}
-.icard p{font-size:.86rem;color:rgba(255,255,255,.75);line-height:1.8}
+/* ─ CTA ─ */
+.ctasec{background:var(--ink);padding:0 72px;border-top:1px solid rgba(255,255,255,.06)}
+.cta-wrap{max-width:1360px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr}
+.cta-l{padding:100px 80px 100px 0;border-right:1px solid rgba(255,255,255,.06)}
+.cta-ll{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:18px}
+.cta-l h2{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,4.5vw,4.5rem);font-weight:900;line-height:1.05;letter-spacing:-.02em;margin-bottom:22px}
+.cta-l h2 em{font-style:italic;color:var(--pink)}
+.cta-l p{font-size:.95rem;color:rgba(255,255,255,.38);line-height:1.9;margin-bottom:40px;max-width:420px}
+.cta-r{padding:100px 0 100px 80px;display:flex;flex-direction:column;gap:0}
+.cinfo{display:grid;grid-template-columns:44px 1fr;gap:20px;padding:26px 0;border-bottom:1px solid rgba(255,255,255,.05);align-items:center}
+.cinfo:first-child{border-top:1px solid rgba(255,255,255,.05)}
+.cinfo-icon{width:44px;height:44px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center}
+.cinfo-k{font-size:.67rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:5px}
+.cinfo-v{font-size:.97rem;font-weight:600}
 
-/* ─── CTA ─── */
-.cta-sec{background:var(--ink);padding:0 56px 0}
-.cta-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(255,255,255,.08)}
-.cta-left{padding:90px 80px 90px 0;border-right:1px solid rgba(255,255,255,.08)}
-.cta-label{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);margin-bottom:20px}
-.cta-left h2{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4vw,3.8rem);font-weight:900;line-height:1.1;letter-spacing:-.015em;margin-bottom:20px}
-.cta-left h2 em{font-style:italic;color:var(--pink)}
-.cta-left p{font-size:1rem;color:rgba(255,255,255,.55);line-height:1.85;margin-bottom:40px}
-.cta-btns{display:flex;gap:14px;flex-wrap:wrap}
-.cta-right{padding:90px 0 90px 80px;display:flex;flex-direction:column;gap:28px}
-.cta-item{display:flex;gap:18px;align-items:flex-start;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.06)}
-.cta-item:last-child{border-bottom:none;padding-bottom:0}
-.ci-icon{width:46px;height:46px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.3rem;border:1px solid rgba(255,255,255,.12)}
-.ci-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:5px}
-.ci-val{font-size:1rem;font-weight:600;color:#fff}
+/* ─ FOOTER ─ */
+footer{background:#0D0D0D;padding:72px 72px 32px;border-top:1px solid rgba(255,255,255,.04)}
+.ftop{max-width:1360px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:60px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,.04)}
+.flogo{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.fbname{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700}
+.fbname b{color:var(--pink);font-weight:900}
+.ftag{font-size:.85rem;color:rgba(255,255,255,.3);line-height:1.85;margin-bottom:26px;max-width:290px}
+.fsocs{display:flex;gap:7px}
+.fsoc{width:32px;height:32px;border:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;color:rgba(255,255,255,.28);transition:all .3s}
+.fsoc:hover{border-color:var(--pink);color:var(--pink)}
+.fcol h5{font-size:.67rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:18px}
+.fcol ul{list-style:none}
+.fcol li{margin-bottom:10px}
+.fcol a{font-size:.87rem;color:rgba(255,255,255,.35);transition:color .3s}
+.fcol a:hover{color:#fff}
+.fct{font-size:.87rem;color:rgba(255,255,255,.35);display:flex;align-items:flex-start;gap:10px;margin-bottom:11px}
+.fct span{color:var(--pink);flex-shrink:0}
+.fbot{max-width:1360px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding-top:26px;font-size:.75rem;color:rgba(255,255,255,.2);flex-wrap:wrap;gap:12px}
+.fbot a{color:rgba(255,255,255,.2);transition:color .3s}
+.fbot a:hover{color:var(--pink)}
 
-/* ─── FOOTER ─── */
-footer{background:#111;padding:70px 56px 32px;border-top:1px solid rgba(255,255,255,.05)}
-.foot-top{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:52px;padding-bottom:52px;border-bottom:1px solid rgba(255,255,255,.06)}
-.foot-brand-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:#fff;margin:14px 0 16px}
-.foot-brand-name b{color:var(--pink)}
-.foot-desc{font-size:.88rem;color:rgba(255,255,255,.4);line-height:1.85;margin-bottom:26px}
-.socs{display:flex;gap:8px}
-.soc-btn{width:34px;height:34px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:rgba(255,255,255,.4);transition:all .3s}
-.soc-btn:hover{border-color:var(--pink);color:var(--pink)}
-.foot-col h5{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:18px}
-.foot-col ul{list-style:none}
-.foot-col li{margin-bottom:10px}
-.foot-col a{font-size:.9rem;color:rgba(255,255,255,.5);transition:color .3s}
-.foot-col a:hover{color:var(--pink)}
-.foot-contact-line{display:flex;gap:12px;align-items:flex-start;margin-bottom:13px;font-size:.88rem;color:rgba(255,255,255,.5)}
-.foot-contact-line span{color:var(--pink);flex-shrink:0;font-size:.9rem}
-.foot-bot{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding-top:26px;font-size:.8rem;color:rgba(255,255,255,.28);flex-wrap:wrap;gap:12px}
-.foot-bot a{color:rgba(255,255,255,.28);transition:color .3s}
-.foot-bot a:hover{color:var(--pink)}
+/* ─ ANIMATION ─ */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .85s cubic-bezier(.25,.46,.45,.94),transform .85s cubic-bezier(.25,.46,.45,.94)}
+.rv.on{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
 
-/* ─── FADE ANIM ─── */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
-.reveal.show{opacity:1;transform:translateY(0)}
-.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
-
-/* ─── RESPONSIVE ─── */
+/* ─ RESPONSIVE ─ */
 @media(max-width:1100px){
-  .hero{grid-template-columns:1fr}
-  .hero-right{display:none}
-  .hero-left{min-height:100svh;padding:130px 36px 72px}
-  .hero-left::after{display:none}
-  .about-inner,.why-top,.cta-inner{grid-template-columns:1fr;gap:44px}
-  .cta-left{padding:72px 0 48px;border-right:none}
-  .cta-right{padding:48px 0 72px;border-top:1px solid rgba(255,255,255,.08)}
-  .why-grid,.ind-row,.tgrid{grid-template-columns:repeat(2,1fr)}
-  .prod-layout{grid-template-columns:1fr;grid-template-rows:auto}
-  .pcell-1,.pcell-2,.pcell-3,.pcell-4{grid-column:1;grid-row:auto}
-  .foot-top{grid-template-columns:1fr 1fr;gap:36px}
-  .products-head,.clients-head{flex-direction:column;align-items:flex-start}
-  .products-head p,.clients-sub{text-align:left}
+  nav,nav.stuck,.hero,.sbar-inner,.products,.why,.ind,.testimonials,.ctasec,footer{padding-left:40px;padding-right:40px}
+  .hero-wrap,.ph,.why-wrap,.cta-wrap{grid-template-columns:1fr;gap:50px}
+  .hero-r{display:none}
+  .hero{padding-top:140px;padding-bottom:72px;align-items:flex-start}
+  .ind-row,.tgrid{grid-template-columns:repeat(2,1fr)}
+  .ftop{grid-template-columns:1fr 1fr;gap:36px}
+  .prow{grid-template-columns:60px 1fr 1fr;gap:24px}
+  .ptags{align-items:flex-start}
+  .cta-l{border-right:none;padding-right:0;padding-bottom:0}
+  .cta-r{padding-left:0;padding-top:60px;border-top:1px solid rgba(255,255,255,.06)}
 }
 @media(max-width:768px){
-  .nav-wrap{padding:16px 24px}
-  header.solid .nav-wrap{padding:12px 24px}
-  .nav-menu,.nav-quote{display:none}
-  .ham{display:flex}
-  .nav-wrap.open .nav-menu{display:flex;flex-direction:column;position:fixed;top:60px;left:0;right:0;background:rgba(17,17,17,.98);padding:28px 24px;gap:22px;border-bottom:1px solid rgba(236,21,135,.2)}
-  .about-strip,.products-sec,.why-sec,.clients-sec,.ind-sec,.cta-sec,footer{padding-left:24px;padding-right:24px}
-  .about-facts,.why-grid,.ind-row,.tgrid{grid-template-columns:1fr}
-  .foot-top{grid-template-columns:1fr}
-  .hero-left{padding:120px 24px 60px}
+  nav,nav.stuck{padding:16px 24px}
+  .nlinks,.nquote{display:none}
+  .nham{display:flex}
+  .nlinks.open{display:flex;flex-direction:column;position:fixed;top:58px;left:0;right:0;background:rgba(13,13,13,.98);padding:28px 24px;gap:22px;border-bottom:1px solid rgba(236,21,135,.15);z-index:99}
+  .hero,.sbar-inner,.products,.why,.ind,.testimonials,.ctasec,footer{padding-left:24px;padding-right:24px}
+  .ind-row,.tgrid{grid-template-columns:1fr}
+  .ftop{grid-template-columns:1fr}
+  .prow{grid-template-columns:44px 1fr;gap:16px}
+  .ptags{grid-column:1/-1;flex-direction:row;flex-wrap:wrap}
+  .ind-top{flex-direction:column}
+  .ind-sub{text-align:left}
+  .hero-scroll{left:24px}
+  .hdivider{display:none}
 }
 </style>
 </head>
 <body>
 
-<!-- ─── HEADER ─── -->
-<header id="hdr">
-  <div class="nav-wrap" id="nwrap">
-    <div class="nav-brand">
-      <svg width="32" height="28" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="g1" x1="0" y1="100" x2="60" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#4066EE"/><stop offset="1" stop-color="#8A159F"/></linearGradient>
-          <linearGradient id="g2" x1="25" y1="80" x2="60" y2="5" gradientUnits="userSpaceOnUse"><stop stop-color="#8A159F"/><stop offset="1" stop-color="#EC1587"/></linearGradient>
-          <linearGradient id="g3" x1="60" y1="90" x2="60" y2="3" gradientUnits="userSpaceOnUse"><stop stop-color="#EC1587"/><stop offset="1" stop-color="#FF7DC0"/></linearGradient>
-          <linearGradient id="g4" x1="95" y1="80" x2="60" y2="5" gradientUnits="userSpaceOnUse"><stop stop-color="#EC1587"/><stop offset="1" stop-color="#FF6736"/></linearGradient>
-          <linearGradient id="g5" x1="120" y1="100" x2="60" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#FF6736"/><stop offset="1" stop-color="#FFA500"/></linearGradient>
-        </defs>
-        <path d="M60 83 C37 66 7 54 5 27 C23 42 47 63 60 83Z" fill="url(#g1)"/>
-        <path d="M60 83 C47 56 32 32 39 7 C51 35 57 62 60 83Z" fill="url(#g2)"/>
-        <path d="M60 83 C54 55 52 27 60 3 C68 27 66 55 60 83Z" fill="url(#g3)"/>
-        <path d="M60 83 C63 62 69 35 81 7 C88 32 73 56 60 83Z" fill="url(#g4)"/>
-        <path d="M60 83 C73 63 97 42 115 27 C113 54 83 66 60 83Z" fill="url(#g5)"/>
-      </svg>
-      <span class="brand-name">Rajas <b>Satva</b></span>
-    </div>
-    <nav class="nav-menu">
-      <a href="#products">Products</a>
-      <a href="#why">Why Us</a>
-      <a href="#industries">Industries</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button class="nav-quote" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get a Quote</button>
-    <button class="ham" id="ham" aria-label="Open menu"><span></span><span></span><span></span></button>
+<!-- NAV -->
+<nav id="nav">
+  <div class="nlogo">
+    <svg width="30" height="26" viewBox="0 0 120 100" fill="none">
+      <defs>
+        <linearGradient id="a1" x1="0" y1="100" x2="60" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#4066EE"/><stop offset="1" stop-color="#8A159F"/></linearGradient>
+        <linearGradient id="a2" x1="25" y1="80" x2="60" y2="5" gradientUnits="userSpaceOnUse"><stop stop-color="#8A159F"/><stop offset="1" stop-color="#EC1587"/></linearGradient>
+        <linearGradient id="a3" x1="60" y1="90" x2="60" y2="4" gradientUnits="userSpaceOnUse"><stop stop-color="#EC1587"/><stop offset="1" stop-color="#FF7DC0"/></linearGradient>
+        <linearGradient id="a4" x1="95" y1="80" x2="60" y2="5" gradientUnits="userSpaceOnUse"><stop stop-color="#EC1587"/><stop offset="1" stop-color="#FF6736"/></linearGradient>
+        <linearGradient id="a5" x1="120" y1="100" x2="60" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#FF6736"/><stop offset="1" stop-color="#FFA500"/></linearGradient>
+      </defs>
+      <path d="M60 83C37 66 7 54 5 27c18 15 42 36 55 56Z" fill="url(#a1)"/>
+      <path d="M60 83C47 56 32 32 39 7c12 28 18 55 21 76Z" fill="url(#a2)"/>
+      <path d="M60 83C54 55 52 27 60 3c8 24 6 52 0 80Z" fill="url(#a3)"/>
+      <path d="M60 83C63 62 69 35 81 7c7 25-8 49-21 76Z" fill="url(#a4)"/>
+      <path d="M60 83C73 63 97 42 115 27c-2 27-32 39-55 56Z" fill="url(#a5)"/>
+    </svg>
+    <span class="nlogotext">Rajas <b>Satva</b></span>
   </div>
-</header>
+  <div class="nlinks" id="nlinks">
+    <a href="#products">Products</a>
+    <a href="#why">About</a>
+    <a href="#industries">Industries</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#contact" class="nquote">Get a Quote</a>
+  <button class="nham" id="ham"><span></span><span></span><span></span></button>
+</nav>
 
-<!-- ─── HERO ─── -->
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-left">
-    <div class="hero-eyebrow">Wholesale &amp; Manufacturer</div>
-    <h1>Where Every<br/>Kitchen<br/><span>Begins.</span></h1>
-    <p class="hero-sub">Bulk supplier of premium cutlery, crockery, cookware, and commercial kitchen equipment — trusted by hotels, restaurants, and retailers across India.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-main">Request a Quote</a>
-      <a href="#products" class="btn-line">View Products</a>
-    </div>
-    <div class="hero-scroll">Scroll to explore</div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-right-content">
-      <div class="big-stat">
-        <span class="big-stat-num">500<span style="font-size:.5em;opacity:.7">+</span></span>
-        <span class="big-stat-label">Hotels &amp; Restaurants Served</span>
-      </div>
-      <div class="hero-pills">
-        <div class="pill"><span class="pill-dot" style="background:var(--pink)"></span>Cutlery &amp; Flatware</div>
-        <div class="pill"><span class="pill-dot" style="background:var(--orange)"></span>Crockery &amp; Tableware</div>
-        <div class="pill"><span class="pill-dot" style="background:var(--purple)"></span>Cookware &amp; Kitchen Tools</div>
-        <div class="pill"><span class="pill-dot" style="background:#fff"></span>Kitchen &amp; Buffet Equipment</div>
+  <div class="hero-wrap">
+    <div>
+      <div class="hero-eyebrow"><span>Wholesale Manufacturer</span> &amp; Supplier · Pan India</div>
+      <h1>
+        Premium<br/>
+        <span class="l2">Kitchen</span>
+        <span class="l3">Supply.</span>
+      </h1>
+      <div class="hdivider"></div>
+      <div class="hero-bottom">
+        <p class="hero-desc">Manufacturer and wholesale supplier of cutlery, crockery, cookware, and commercial kitchen equipment — trusted by hotels, restaurants, and retailers across India.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-pk">Request Quote</a>
+          <a href="#products" class="btn-ol">View Products</a>
+        </div>
       </div>
     </div>
+    <div class="hero-r">
+      <div class="hstat">
+        <span class="hstat-n">500<span style="font-size:.42em;opacity:.5">+</span></span>
+        <span class="hstat-l">Hotels &amp; Restaurants Served</span>
+      </div>
+      <div class="hpills">
+        <div class="hpill"><span class="hpill-dot" style="background:var(--pink)"></span>Cutlery &amp; Flatware</div>
+        <div class="hpill"><span class="hpill-dot" style="background:var(--orange)"></span>Crockery &amp; Tableware</div>
+        <div class="hpill"><span class="hpill-dot" style="background:var(--purple)"></span>Cookware &amp; Kitchen Tools</div>
+        <div class="hpill"><span class="hpill-dot" style="background:rgba(255,255,255,.3)"></span>Buffet &amp; Serving Equipment</div>
+      </div>
+    </div>
   </div>
+  <div class="hero-scroll">Scroll to explore</div>
 </section>
 
-<!-- ─── MARQUEE ─── -->
-<div class="marquee-wrap" aria-hidden="true">
-  <div class="marquee-track">
-    <span class="marquee-item">Stainless Steel Cutlery</span>
-    <span class="marquee-item">Bone China Crockery</span>
-    <span class="marquee-item">Commercial Cookware</span>
-    <span class="marquee-item">Chafing Dishes</span>
-    <span class="marquee-item">Buffet Equipment</span>
-    <span class="marquee-item">Bulk Orders</span>
-    <span class="marquee-item">Pan India Delivery</span>
-    <span class="marquee-item">Custom Branding</span>
-    <span class="marquee-item">Hotel Supplies</span>
-    <span class="marquee-item">Stainless Steel Cutlery</span>
-    <span class="marquee-item">Bone China Crockery</span>
-    <span class="marquee-item">Commercial Cookware</span>
-    <span class="marquee-item">Chafing Dishes</span>
-    <span class="marquee-item">Buffet Equipment</span>
-    <span class="marquee-item">Bulk Orders</span>
-    <span class="marquee-item">Pan India Delivery</span>
-    <span class="marquee-item">Custom Branding</span>
-    <span class="marquee-item">Hotel Supplies</span>
+<!-- STATS BAR -->
+<div class="sbar">
+  <div class="sbar-inner">
+    <div class="sitem rv"><span class="sitem-n">500<span>+</span></span><span class="sitem-l">Hotel Clients</span></div>
+    <div class="sitem rv d1"><span class="sitem-n">10K<span>+</span></span><span class="sitem-l">Products in Catalogue</span></div>
+    <div class="sitem rv d2"><span class="sitem-n">15<span>+</span></span><span class="sitem-l">Years Manufacturing</span></div>
+    <div class="sitem rv d3"><span class="sitem-n" style="font-size:1.9rem;letter-spacing:-.01em">Pan India</span><span class="sitem-l">Supply Network</span></div>
   </div>
 </div>
 
-<!-- ─── ABOUT STRIP ─── -->
-<section class="about-strip">
-  <div class="about-inner">
-    <div>
-      <div class="about-label">About Raajas India</div>
-      <h2>India's Backbone<br/>for the Hospitality<br/><em>Supply Chain.</em></h2>
-      <div class="about-facts">
-        <div class="fact reveal"><div class="fact-n">15+</div><div class="fact-l">Years Manufacturing</div></div>
-        <div class="fact reveal d1"><div class="fact-n">10K+</div><div class="fact-l">Products in Range</div></div>
-        <div class="fact reveal d2"><div class="fact-n">500+</div><div class="fact-l">Hotel Clients</div></div>
-        <div class="fact reveal d3"><div class="fact-n">All India</div><div class="fact-l">Supply Network</div></div>
+<!-- PRODUCTS -->
+<section id="products" class="products">
+  <div class="products-wrap">
+    <div class="ph rv">
+      <div>
+        <div class="ph-label">Our Product Range</div>
+        <h2>Everything<br/>Your Kitchen<br/><em>Demands.</em></h2>
       </div>
+      <p class="ph-desc">From a single fork to a complete hotel kitchen — we manufacture and wholesale supply it all, at any scale, delivered to your door.</p>
     </div>
-    <div class="about-right reveal">
-      <p>Raajas India Private Limited is a leading manufacturer and wholesale supplier of premium kitchen and dining essentials. We produce and supply everything a hotel, restaurant, or retail business needs — from fine cutlery and crockery to heavy-duty commercial cookware and kitchen equipment.</p>
-      <p>With over 15 years of manufacturing experience and a distribution network spanning all of India, we've become the trusted procurement partner for some of the country's finest hospitality brands. Our commitment: consistent quality, competitive pricing, and reliable delivery — every time.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ─── PRODUCTS ─── -->
-<section id="products" class="products-sec">
-  <div class="products-head reveal">
-    <div>
-      <h2>Our <em>Product</em><br/>Range</h2>
-    </div>
-    <p>From a single fork to a complete hotel setup — we supply it all, in bulk, to your door.</p>
-  </div>
-  <div class="prod-layout">
-    <div class="pcell pcell-1 reveal">
-      <div class="pcell-num">01</div>
-      <div class="pcell-icon">🍴</div>
-      <h3>Cutlery</h3>
-      <p>Premium stainless steel and silver-plated cutlery sets for fine dining, banquets, and bulk hospitality procurement.</p>
-      <div class="pcell-tags">
-        <span class="ptag">Forks &amp; Spoons</span>
-        <span class="ptag">Knives</span>
-        <span class="ptag">Serving Sets</span>
-        <span class="ptag">Tea Spoons</span>
+    <div class="plist">
+      <div class="prow rv">
+        <div class="pnum">01</div>
+        <div class="pname">Cutlery</div>
+        <div class="pdesc">Premium stainless steel and silver-plated cutlery sets for fine dining, banquets, and bulk hospitality procurement. Every piece crafted for longevity.</div>
+        <div class="ptags"><span class="ptag">Forks &amp; Spoons</span><span class="ptag">Knives</span><span class="ptag">Serving Sets</span></div>
       </div>
-    </div>
-    <div class="pcell pcell-2 reveal d1">
-      <div class="pcell-num">02</div>
-      <div class="pcell-icon">🍽️</div>
-      <h3>Crockery</h3>
-      <p>Bone china, porcelain, and melamine crockery across a wide design range for hotels, restaurants, and catering.</p>
-      <div class="pcell-tags">
-        <span class="ptag">Dinner Plates</span>
-        <span class="ptag">Soup Bowls</span>
-        <span class="ptag">Tea Sets</span>
+      <div class="prow rv d1">
+        <div class="pnum">02</div>
+        <div class="pname">Crockery</div>
+        <div class="pdesc">Bone china, porcelain, and melamine crockery in a wide range of designs — built for the demands of hotels, restaurants, and catering.</div>
+        <div class="ptags"><span class="ptag">Dinner Plates</span><span class="ptag">Soup Bowls</span><span class="ptag">Tea Sets</span></div>
       </div>
-    </div>
-    <div class="pcell pcell-3 reveal d2">
-      <div class="pcell-num">03</div>
-      <div class="pcell-icon">🥘</div>
-      <h3>Cookware</h3>
-      <p>Heavy-duty commercial pots, pans, deg, handi, and specialty vessels built for high-volume professional kitchens.</p>
-      <div class="pcell-tags">
-        <span class="ptag">Stock Pots</span>
-        <span class="ptag">Fry Pans</span>
-        <span class="ptag">Deg &amp; Handi</span>
+      <div class="prow rv d2">
+        <div class="pnum">03</div>
+        <div class="pname">Cookware</div>
+        <div class="pdesc">Heavy-duty commercial pots, pans, deg, and handi — engineered for the relentless demands of professional, high-volume kitchens.</div>
+        <div class="ptags"><span class="ptag">Stock Pots</span><span class="ptag">Fry Pans</span><span class="ptag">Deg &amp; Handi</span></div>
       </div>
-    </div>
-    <div class="pcell pcell-4 reveal d3">
-      <div class="pcell-num">04</div>
-      <div class="pcell-icon">⚙️</div>
-      <h3>Kitchen<br/>Equipment</h3>
-      <p>Chafing dishes, buffet sets, serving trolleys, gastronorm containers, and complete hotel kitchen accessories.</p>
-      <div class="pcell-tags">
-        <span class="ptag">Chafing Dishes</span>
-        <span class="ptag">Buffet Sets</span>
-        <span class="ptag">Trolleys</span>
+      <div class="prow rv d3">
+        <div class="pnum">04</div>
+        <div class="pname">Kitchen Equipment</div>
+        <div class="pdesc">Chafing dishes, buffet sets, gastronorm containers, trolleys, and the complete range of hotel kitchen and service accessories.</div>
+        <div class="ptags"><span class="ptag">Chafing Dishes</span><span class="ptag">Buffet Sets</span><span class="ptag">Trolleys</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── WHY US ─── -->
-<section id="why" class="why-sec">
-  <div class="why-inner">
-    <div class="why-top">
-      <div>
-        <div class="why-tag">Why Raajas</div>
-        <h2>We Don't Just<br/>Supply — We <em>Partner.</em></h2>
-      </div>
-      <p>The hospitality industry demands precision, consistency, and reliability. We've built our entire operation around those three principles — because your kitchen never stops, and neither do we.</p>
+<!-- WHY -->
+<section id="why" class="why">
+  <div class="why-wrap">
+    <div class="rv">
+      <div class="wlabel">Why Raajas</div>
+      <h2>We Don't<br/>Just Supply —<br/>We <em>Partner.</em></h2>
+      <p class="why-intro">The hospitality industry demands precision, consistency, and reliability. We've built our entire operation around those three principles — because your kitchen never stops, and neither do we.</p>
     </div>
-    <div class="why-grid">
-      <div class="wbox reveal">
-        <div class="wbox-icon">🏭</div>
-        <h4>Direct Manufacturer</h4>
-        <p>No middlemen. We manufacture directly, giving you the best wholesale price with quality control at every stage.</p>
-      </div>
-      <div class="wbox reveal d1">
-        <div class="wbox-icon">📦</div>
-        <h4>Bulk Order Ready</h4>
-        <p>From 100 to 1,00,000 pieces — we handle high-volume orders with consistent quality and on-time delivery guaranteed.</p>
-      </div>
-      <div class="wbox reveal d2">
-        <div class="wbox-icon">✅</div>
-        <h4>Quality Certified</h4>
-        <p>All products meet international hospitality standards. Trusted by 5-star hotels and leading restaurant chains.</p>
-      </div>
-      <div class="wbox reveal d3">
-        <div class="wbox-icon">🔖</div>
-        <h4>Custom Branding</h4>
-        <p>Logo engraving, custom finishes, and bespoke designs — your brand identity, on every piece.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── TESTIMONIALS ─── -->
-<section class="clients-sec">
-  <div class="clients-inner">
-    <div class="clients-head reveal">
-      <div>
-        <h2>Our <em>Clients</em><br/>Speak.</h2>
-      </div>
-      <div>
-        <div class="clients-label">Testimonials</div>
-        <p class="clients-sub">From five-star hotels to growing restaurant chains — they trust Raajas.</p>
-      </div>
-    </div>
-    <div class="tgrid">
-      <div class="tcell reveal">
-        <div class="tcell-accent"></div>
-        <div class="tcell-stars">★★★★★</div>
-        <span class="tcell-q">"</span>
-        <p class="tcell-text">Raajas has been our exclusive kitchen supplier for over 5 years. Quality, delivery timelines, and after-sales support are second to none in the industry.</p>
-        <div class="tcell-auth">
-          <div class="tav" style="background:linear-gradient(135deg,var(--pink),var(--orange))">RP</div>
-          <div><div class="tav-name">Rajesh Patel</div><div class="tav-role">GM, Horizon Grand Hotel, Mumbai</div></div>
+    <div class="wfeats">
+      <div class="wfeat rv">
+        <div class="wfn">01</div>
+        <div>
+          <h4>Direct Manufacturer</h4>
+          <p>No middlemen. We manufacture directly — ensuring the best wholesale price with quality control at every production stage.</p>
         </div>
       </div>
-      <div class="tcell reveal d1">
-        <div class="tcell-accent"></div>
-        <div class="tcell-stars">★★★★★</div>
-        <span class="tcell-q">"</span>
-        <p class="tcell-text">Excellent product range and unbeatable bulk pricing. We sourced all crockery and cookware for 3 restaurant locations from Raajas. Highly recommended.</p>
-        <div class="tcell-auth">
-          <div class="tav" style="background:linear-gradient(135deg,var(--purple),var(--pink))">AM</div>
-          <div><div class="tav-name">Ananya Mehta</div><div class="tav-role">Owner, The Spice Route, Bangalore</div></div>
+      <div class="wfeat rv d1">
+        <div class="wfn">02</div>
+        <div>
+          <h4>Bulk Order Specialists</h4>
+          <p>From 100 to 1,00,000 pieces — consistent quality and guaranteed timelines, regardless of order size.</p>
         </div>
       </div>
-      <div class="tcell reveal d2">
-        <div class="tcell-accent"></div>
-        <div class="tcell-stars">★★★★★</div>
-        <span class="tcell-q">"</span>
-        <p class="tcell-text">Custom-branded cutlery delivered perfectly on time. International quality at a fraction of the import cost — we won't source from anyone else.</p>
-        <div class="tcell-auth">
-          <div class="tav" style="background:linear-gradient(135deg,var(--orange),#FFA500)">SK</div>
-          <div><div class="tav-name">Suresh Kumar</div><div class="tav-role">Procurement Head, Sterling Resorts</div></div>
+      <div class="wfeat rv d2">
+        <div class="wfn">03</div>
+        <div>
+          <h4>Quality Certified</h4>
+          <p>All products meet international hospitality-grade standards. Trusted by 5-star hotels and restaurant chains nationwide.</p>
+        </div>
+      </div>
+      <div class="wfeat rv d3">
+        <div class="wfn">04</div>
+        <div>
+          <h4>Custom Branding</h4>
+          <p>Logo engraving, custom finishes, bespoke designs — your brand identity on every piece we supply.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── INDUSTRIES ─── -->
-<section id="industries" class="ind-sec">
-  <div class="ind-inner">
-    <div class="ind-top reveal">
-      <span>Industries We Serve</span>
-      <h2>Every Kitchen,<br/>Every <em>Scale.</em></h2>
+<!-- INDUSTRIES -->
+<section id="industries" class="ind">
+  <div class="ind-wrap">
+    <div class="ind-top rv">
+      <div class="ind-top-left">
+        <div class="il">Industries We Serve</div>
+        <h2>Every Kitchen,<br/>Every <em>Scale.</em></h2>
+      </div>
+      <p class="ind-sub">From five-star hotels to neighbourhood restaurants — complete procurement solutions for every requirement.</p>
     </div>
     <div class="ind-row">
-      <div class="icard reveal">
-        <span class="icard-em">🏨</span>
+      <div class="icell rv">
+        <span class="icell-n">— 01</span>
+        <div class="icell-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="1"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
         <h3>Hotels &amp; Resorts</h3>
         <p>Complete kitchenware and dining solutions for luxury hotels, business hotels, and resort properties of all sizes.</p>
       </div>
-      <div class="icard reveal d1">
-        <span class="icard-em">🍽️</span>
+      <div class="icell rv d1">
+        <span class="icell-n">— 02</span>
+        <div class="icell-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c-3 4-3 14 0 18M12 3c3 4 3 14 0 18"/></svg>
+        </div>
         <h3>Restaurants &amp; Cafes</h3>
-        <p>Durable, stylish tableware and equipment for fine-dining, casual, and QSR restaurants nationwide.</p>
+        <p>Durable, stylish tableware and equipment for fine-dining, casual, and quick-service restaurants.</p>
       </div>
-      <div class="icard reveal d2">
-        <span class="icard-em">🎪</span>
+      <div class="icell rv d2">
+        <span class="icell-n">— 03</span>
+        <div class="icell-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
         <h3>Catering Companies</h3>
-        <p>Bulk supply of portable, heavy-duty equipment for large-scale catering and event management firms.</p>
+        <p>Portable, heavy-duty equipment for large-scale catering and event management firms across India.</p>
       </div>
-      <div class="icard reveal d3">
-        <span class="icard-em">🏪</span>
+      <div class="icell rv d3">
+        <span class="icell-n">— 04</span>
+        <div class="icell-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.5" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
         <h3>Retail &amp; Distributors</h3>
         <p>Wholesale pricing and white-label options for kitchenware retailers and regional distributors.</p>
       </div>
@@ -519,67 +427,116 @@ footer{background:#111;padding:70px 56px 32px;border-top:1px solid rgba(255,255,
   </div>
 </section>
 
-<!-- ─── CONTACT CTA ─── -->
-<section id="contact" class="cta-sec">
-  <div class="cta-inner">
-    <div class="cta-left reveal">
-      <div class="cta-label">Get In Touch</div>
-      <h2>Let's Talk<br/><em>Bulk Pricing.</em></h2>
-      <p>Whether you need 100 plates or a complete hotel kitchen setup — our sales team will get you the right products at the right price. Request a quote and hear back within 24 hours.</p>
-      <div class="cta-btns">
-        <a href="tel:+919999999999" class="btn-main">Call Us Now</a>
-        <a href="mailto:info@raajasindia.com" class="btn-line">Email for Catalogue</a>
-      </div>
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="test-wrap">
+    <div class="test-head rv">
+      <div class="tlabel">Client Testimonials</div>
+      <h2>Our Clients<br/><em>Speak.</em></h2>
     </div>
-    <div class="cta-right reveal d1">
-      <div class="cta-item">
-        <div class="ci-icon">📞</div>
-        <div><div class="ci-label">Phone</div><div class="ci-val">+91 XXXXX XXXXX</div></div>
+    <div class="tgrid">
+      <div class="tcard rv">
+        <div class="tcard-top" style="background:var(--pink)"></div>
+        <span class="tcard-q">"</span>
+        <p class="tcard-text">Raajas has been our exclusive kitchen supplier for over 5 years. Quality, delivery timelines, and after-sales support are second to none in the industry.</p>
+        <div class="tcard-rule"></div>
+        <div class="tcard-name">Rajesh Patel</div>
+        <div class="tcard-role">GM, Horizon Grand Hotel — Mumbai</div>
+        <div class="tcard-stars">★★★★★</div>
       </div>
-      <div class="cta-item">
-        <div class="ci-icon">✉️</div>
-        <div><div class="ci-label">Email</div><div class="ci-val">info@raajasindia.com</div></div>
+      <div class="tcard rv d1">
+        <div class="tcard-top" style="background:var(--orange)"></div>
+        <span class="tcard-q">"</span>
+        <p class="tcard-text">Excellent product range and unbeatable bulk pricing. We sourced all crockery and cookware for 3 restaurant locations from Raajas. Highly recommended.</p>
+        <div class="tcard-rule"></div>
+        <div class="tcard-name">Ananya Mehta</div>
+        <div class="tcard-role">Owner, The Spice Route — Bangalore</div>
+        <div class="tcard-stars">★★★★★</div>
       </div>
-      <div class="cta-item">
-        <div class="ci-icon">🕐</div>
-        <div><div class="ci-label">Working Hours</div><div class="ci-val">Mon – Sat, 9am – 6pm IST</div></div>
-      </div>
-      <div class="cta-item">
-        <div class="ci-icon">📍</div>
-        <div><div class="ci-label">Headquarters</div><div class="ci-val">Raajas India Pvt. Ltd., India</div></div>
+      <div class="tcard rv d2">
+        <div class="tcard-top" style="background:var(--purple)"></div>
+        <span class="tcard-q">"</span>
+        <p class="tcard-text">Custom-branded cutlery delivered perfectly on time. International quality at a fraction of import cost — we won't source from anyone else.</p>
+        <div class="tcard-rule"></div>
+        <div class="tcard-name">Suresh Kumar</div>
+        <div class="tcard-role">Procurement Head, Sterling Resorts</div>
+        <div class="tcard-stars">★★★★★</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── FOOTER ─── -->
-<footer>
-  <div class="foot-top">
-    <div>
-      <svg width="28" height="24" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="fg1" x1="0" y1="100" x2="60" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#4066EE"/><stop offset="1" stop-color="#8A159F"/></linearGradient>
-          <linearGradient id="fg2" x1="25" y1="80" x2="60" y2="5" gradientUnits="userSpaceOnUse"><stop stop-color="#8A159F"/><stop offset="1" stop-color="#EC1587"/></linearGradient>
-          <linearGradient id="fg3" x1="60" y1="90" x2="60" y2="3" gradientUnits="userSpaceOnUse"><stop stop-color="#EC1587"/><stop offset="1" stop-color="#FF7DC0"/></linearGradient>
-          <linearGradient id="fg4" x1="95" y1="80" x2="60" y2="5" gradientUnits="userSpaceOnUse"><stop stop-color="#EC1587"/><stop offset="1" stop-color="#FF6736"/></linearGradient>
-          <linearGradient id="fg5" x1="120" y1="100" x2="60" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#FF6736"/><stop offset="1" stop-color="#FFA500"/></linearGradient>
-        </defs>
-        <path d="M60 83 C37 66 7 54 5 27 C23 42 47 63 60 83Z" fill="url(#fg1)"/>
-        <path d="M60 83 C47 56 32 32 39 7 C51 35 57 62 60 83Z" fill="url(#fg2)"/>
-        <path d="M60 83 C54 55 52 27 60 3 C68 27 66 55 60 83Z" fill="url(#fg3)"/>
-        <path d="M60 83 C63 62 69 35 81 7 C88 32 73 56 60 83Z" fill="url(#fg4)"/>
-        <path d="M60 83 C73 63 97 42 115 27 C113 54 83 66 60 83Z" fill="url(#fg5)"/>
-      </svg>
-      <div class="foot-brand-name">Rajas <b>Satva</b></div>
-      <p class="foot-desc">India's trusted manufacturer and wholesale supplier of premium kitchen equipment, cutlery, crockery, and cookware for hospitality and retail.</p>
-      <div class="socs">
-        <a href="#" class="soc-btn">in</a>
-        <a href="#" class="soc-btn">fb</a>
-        <a href="#" class="soc-btn">ig</a>
-        <a href="#" class="soc-btn">yt</a>
+<!-- CTA / CONTACT -->
+<section id="contact" class="ctasec">
+  <div class="cta-wrap">
+    <div class="cta-l rv">
+      <div class="cta-ll">Get In Touch</div>
+      <h2>Let's Talk<br/><em>Bulk Pricing.</em></h2>
+      <p>Whether you need 100 plates or a complete hotel kitchen setup — our team will get you the right products at the right price. Hear back within 24 hours.</p>
+      <div class="hero-actions">
+        <a href="tel:+919999999999" class="btn-pk">Call Us Now</a>
+        <a href="mailto:info@raajasindia.com" class="btn-ol">Email Us</a>
       </div>
     </div>
-    <div class="foot-col">
+    <div class="cta-r rv d1">
+      <div class="cinfo">
+        <div class="cinfo-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+        </div>
+        <div><div class="cinfo-k">Phone</div><div class="cinfo-v">+91 XXXXX XXXXX</div></div>
+      </div>
+      <div class="cinfo">
+        <div class="cinfo-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.5" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div><div class="cinfo-k">Email</div><div class="cinfo-v">info@raajasindia.com</div></div>
+      </div>
+      <div class="cinfo">
+        <div class="cinfo-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div><div class="cinfo-k">Working Hours</div><div class="cinfo-v">Mon – Sat, 9am – 6pm IST</div></div>
+      </div>
+      <div class="cinfo">
+        <div class="cinfo-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div><div class="cinfo-k">Headquarters</div><div class="cinfo-v">Raajas India Pvt. Ltd., India</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ftop">
+    <div>
+      <div class="flogo">
+        <svg width="26" height="22" viewBox="0 0 120 100" fill="none">
+          <defs>
+            <linearGradient id="b1" x1="0" y1="100" x2="60" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#4066EE"/><stop offset="1" stop-color="#8A159F"/></linearGradient>
+            <linearGradient id="b2" x1="25" y1="80" x2="60" y2="5" gradientUnits="userSpaceOnUse"><stop stop-color="#8A159F"/><stop offset="1" stop-color="#EC1587"/></linearGradient>
+            <linearGradient id="b3" x1="60" y1="90" x2="60" y2="4" gradientUnits="userSpaceOnUse"><stop stop-color="#EC1587"/><stop offset="1" stop-color="#FF7DC0"/></linearGradient>
+            <linearGradient id="b4" x1="95" y1="80" x2="60" y2="5" gradientUnits="userSpaceOnUse"><stop stop-color="#EC1587"/><stop offset="1" stop-color="#FF6736"/></linearGradient>
+            <linearGradient id="b5" x1="120" y1="100" x2="60" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#FF6736"/><stop offset="1" stop-color="#FFA500"/></linearGradient>
+          </defs>
+          <path d="M60 83C37 66 7 54 5 27c18 15 42 36 55 56Z" fill="url(#b1)"/>
+          <path d="M60 83C47 56 32 32 39 7c12 28 18 55 21 76Z" fill="url(#b2)"/>
+          <path d="M60 83C54 55 52 27 60 3c8 24 6 52 0 80Z" fill="url(#b3)"/>
+          <path d="M60 83C63 62 69 35 81 7c7 25-8 49-21 76Z" fill="url(#b4)"/>
+          <path d="M60 83C73 63 97 42 115 27c-2 27-32 39-55 56Z" fill="url(#b5)"/>
+        </svg>
+        <span class="fbname">Rajas <b>Satva</b></span>
+      </div>
+      <p class="ftag">India's trusted manufacturer and wholesale supplier of premium kitchen equipment, cutlery, crockery, and cookware for hospitality and retail.</p>
+      <div class="fsocs">
+        <a href="#" class="fsoc">in</a>
+        <a href="#" class="fsoc">fb</a>
+        <a href="#" class="fsoc">ig</a>
+        <a href="#" class="fsoc">yt</a>
+      </div>
+    </div>
+    <div class="fcol">
       <h5>Products</h5>
       <ul>
         <li><a href="#">Cutlery</a></li>
@@ -590,7 +547,7 @@ footer{background:#111;padding:70px 56px 32px;border-top:1px solid rgba(255,255,
         <li><a href="#">Custom Orders</a></li>
       </ul>
     </div>
-    <div class="foot-col">
+    <div class="fcol">
       <h5>Company</h5>
       <ul>
         <li><a href="#">About Us</a></li>
@@ -598,46 +555,38 @@ footer{background:#111;padding:70px 56px 32px;border-top:1px solid rgba(255,255,
         <li><a href="#">Quality Standards</a></li>
         <li><a href="#">Industries</a></li>
         <li><a href="#">Careers</a></li>
-        <li><a href="#">Blog</a></li>
       </ul>
     </div>
-    <div class="foot-col">
+    <div class="fcol">
       <h5>Contact</h5>
-      <div class="foot-contact-line"><span>📞</span>+91 XXXXX XXXXX</div>
-      <div class="foot-contact-line"><span>✉️</span>info@raajasindia.com</div>
-      <div class="foot-contact-line"><span>📍</span>Raajas India Private Limited, India</div>
+      <div class="fct"><span>→</span>+91 XXXXX XXXXX</div>
+      <div class="fct"><span>→</span>info@raajasindia.com</div>
+      <div class="fct"><span>→</span>Raajas India Pvt. Ltd., India</div>
     </div>
   </div>
-  <div class="foot-bot">
+  <div class="fbot">
     <span>© 2025 Raajas India Private Limited. All rights reserved.</span>
-    <div style="display:flex;gap:20px"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+    <div style="display:flex;gap:22px"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
   </div>
 </footer>
 
 <script>
-// Sticky header
 window.addEventListener('scroll',()=>{
-  document.getElementById('hdr').classList.toggle('solid',scrollY>60);
+  document.getElementById('nav').classList.toggle('stuck',scrollY>70);
 });
-
-// Reveal on scroll
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');obs.unobserve(e.target);}});
-},{threshold:.1,rootMargin:'0px 0px -36px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
-// Smooth scroll
+const obs=new IntersectionObserver(e=>{
+  e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');obs.unobserve(x.target);}});
+},{threshold:.08,rootMargin:'0px 0px -28px 0px'});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',function(e){
     const t=document.querySelector(this.getAttribute('href'));
     if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
   });
 });
-
-// Hamburger
-const ham=document.getElementById('ham');
-const nwrap=document.getElementById('nwrap');
-ham.addEventListener('click',()=>nwrap.classList.toggle('open'));
+document.getElementById('ham').addEventListener('click',()=>{
+  document.getElementById('nlinks').classList.toggle('open');
+});
 </script>
 </body>
 </html>
